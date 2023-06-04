@@ -58,18 +58,77 @@ Con un diseño único, atractivo, compacto, ligero y versátil, las baterías pu
     
     <section>
       <h2>Contacto</h2>
-      <form action="enviar_email.php" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+      <div class="container">
+        <div class="py-5 text-center">
+            <h2>Formulario de Contacto</h2>
+        </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <form class="row needs-validation" name='formulario' id='formulario' method='post' action='confirmacion.php' target='_self' enctype="multipart/form-data" novalidate>
+            <div class="col-md-6">
+                <label class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                <div class="invalid-feedback">
+                    Ingrese nombre.
+                </div>
+            </div>
 
-        <label for="mensaje">Mensaje:</label><br>
-        <textarea id="mensaje" name="mensaje" required></textarea><br><br>
+            <div class="col-md-6">
+                <label class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <div class="invalid-feedback">
+                    Ingrese email.
+                </div>
+            </div>
 
-        <input type="submit" value="Enviar">
-    </section>
+            <div class="col-md-6">
+                <label class="form-label">Teléfono:</label>
+                <input type="text" class="form-control" id="telefono" name="telefono" required>
+                <div class="invalid-feedback">
+                    Ingrese teléfono.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Asunto:</label>
+                <input type="text" class="form-control" id="asunto" name="asunto" required>
+                <div class="invalid-feedback">
+                    Ingrese asunto.
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <label class="form-label">Si desea puede adjuntar un archivo:</label>
+                <br>
+                <input type='file' name='archivo' id='archivo'>
+                <br>
+                <div class="invalid-feedback">
+                    Ingrese menasaje.
+                </div>
+            </div>
+            <div class="col-md-12">
+                <label class="form-label">Mensaje:</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" required></textarea>
+                <div class="invalid-feedback">
+                    Ingrese menasaje.
+                </div>
+            </div>
+
+
+            <div class="col-12 m-1">
+                <button class="btn btn-primary" id="boton-enviar" type="submit" value="Enviar" name="input_submit" onclick="sendForm()">Enviar</button>
+ 
+            </div>
+
+        </form>
+		
+		               <button class="btn btn-primary float-right" onclick="autoCompletar()">AutoCompletar</button>
+
+
+
+
+
+</body>
+<script src="libs/formJs.js" ?id=<? print(date('H:i:s')); ?>></script>
+
   </main>
   
   <footer>
