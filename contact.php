@@ -3,7 +3,7 @@ $field_name = $_POST['cf_name'];
 $field_email = $_POST['cf_email'];
 $field_message = $_POST['cf_message'];
 
-$mail_to = 'youremail@emaildomain.com';
+$mail_to = 'info@2lineenenergy.com';
 $subject = 'Your Subject'.$field_name;
 
 $body_message = 'From: '.$field_name."\n";
