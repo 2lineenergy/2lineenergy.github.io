@@ -66,13 +66,21 @@ Con un diseño único, atractivo, compacto, ligero y versátil, las baterías pu
     <body>
       <form action="https://mailthis.to/info@2lineenergy.com" method="post">
      <p style="text-align: center">
-          Nombre: <input name="nombre" size="20" /><br />
-          Empresa: <input name="empresa" size="20" /><br />
-	  Asunto: <input name="asunto" size="20" /> <br />
-	  Texto: <input name="texto" size="40" /> <br />
-     </p>
-     <input type="submit" value="Enviar" name="B1" />
+    
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+    
+    <label for="telefono">Telefono:</label>
+    <input type="text" id="telefono" name="telefono" required><br><br>
 
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="5" cols="30" required></textarea><br><br>
+
+    <input type="submit" value="Enviar">
+	     
      <input type="hidden" value="info@2lineenergy.com" name="recipient" />
      <input type="hidden" value="https://2lineenergy.com" name="redirect" />
      <input type="hidden" value="Formulario enviado por WEB" name="subject" />
