@@ -4,11 +4,29 @@ body {
   margin: 0;
   padding: 0;
 }
+.barra-navegacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enlaces {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.enlaces li {
+  margin: 0;
+}
+
+.enlaces li a {
+  text-decoration: none;
+  color: #333;
+}
 
 .logo {
-  float: left;
-  /* Otros estilos opcionales */
-  margin-right: 20px; /* Margen derecho para separar el logo de otros elementos */
+  margin-right: 20px;
 }
 
 /* Estilos del encabezado */
