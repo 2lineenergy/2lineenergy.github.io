@@ -6,9 +6,10 @@ body {
 }
 
 .logo {
-  text-align: center;
+  float: left;
+  /* Otros estilos opcionales */
+  margin-right: 20px; /* Margen derecho para separar el logo de otros elementos */
 }
-
 
 /* Estilos del encabezado */
 header {
