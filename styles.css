@@ -6,9 +6,7 @@ body {
 }
 
 .logo {
-  float: left;
-  /* Otros estilos opcionales */
-  margin-right: 20px; /* Margen derecho para separar el logo de otros elementos */
+  text-align: center;
 }
 
 
