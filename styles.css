@@ -74,10 +74,10 @@ form button {
 boton-enlace {
   display: inline-block;
   padding: 20px 30px;
-  background-color: #337ab7;
-  color: grey;
+  background-color: #333;
+  color: #fff;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 /* Estilos del pie de página */
