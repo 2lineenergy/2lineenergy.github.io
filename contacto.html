@@ -41,18 +41,20 @@
   <main>
     <section>
   <h1>Formulario de contacto</h1>
-  
-<form action="/cgi-sys/form-mail.cgi" method="post">
-     <p style="text-align: center;">
-          Nombre: <input name="nombre" size="20" /><br />
-          Empresa: <input name="empresa" size="20" />
-     </p>
-     <input type="submit" value="Enviar" name="B1" />
+	    
+<form method="POST" action="/submit-form">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
 
-     <input type="hidden" value="info@2lineenergy.com" name="recipient" />
-     <input type="hidden" value="http://www.2lineenergy.com" name="redirect" />
-     <input type="hidden" value="Formulario enviado por WEB" name="subject" />
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message"></textarea>
+
+  <button type="submit">Submit</button>
 </form>
+	    
 </section>
   </main>
   <footer>
