@@ -42,29 +42,17 @@
     <section>
   <h1>Formulario de contacto</h1>
   
-  <form action="https://mailthis.to/2lineenergy.com" method="POST" encType="multipart/form-data">
-      <p style="text-align: center">
-    
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required><br><br>
-
-      <label for="telefono">Teléfono:</label>
-      <input type="text" id="telefono" name="telefono" required><br><br>
-
-      <label for="email">Correo electrónico:</label>
-      <input type="text" id="email" name="email" required><br><br>
-
-      <label for="asunto">Asunto:</label>
-      <input type="text" id="asunto" name="asunto" required><br><br>
-
-      <label for="mensaje">Mensaje:</label><br>
-      <textarea id="mensaje" name="mensaje" rows="5" cols="30" required></textarea><br><br>
-
-      <input type="submit" value="Enviar">
-	     
-     <input type="hidden" value="info@2lineenergy.com" name="recipient" />
-     <input type="hidden" value="https://2lineenergy.com" name="redirect" />
-     <input type="hidden" value="Formulario enviado por Contacto 2lineenergy.com" name="subject" />
+  <form action="https://mailthis.to/" 
+     method="POST" encType="multipart/form-data">
+    <input type="text" name="name" placeholder="Your name">
+    <input type="email" name="_replyto" placeholder="info@2lineenergy.com">
+    <textarea name="message" placeholder="Enter your message here"></textarea>
+    <input type="file" name="file" placeholder="Attachments (optional)">
+    <input type="hidden" name="_subject" value="Contact form submitted">
+    <input type="hidden" name="_after" value="https://myhomepage.net/">
+    <input type="hidden" name="_honeypot" value="">
+    <input type="hidden" name="_confirmation" value="">
+    <input type="submit" value="Send">
 </form>	    
 </section>
   </main>
