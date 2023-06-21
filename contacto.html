@@ -42,41 +42,17 @@
     <section>
   <h1>Formulario de contacto</h1>
   
-<FORM ACTION="http://cgi.2lineenergy.com/FormMail.pl" METHOD="POST">
-<input type=hidden name="recipient" value="info@2lineenergy.com">
-<input type=hidden name="subject" value="Asunto del mail que se envia">
-<input type=hidden name="redirect" value="http://2lineenergy.com/contacto.html">
+<form action="/cgi-sys/form-mail.cgi" method="post">
+     <p style="text-align: center;">
+          Nombre: <input name="nombre" size="20" /><br />
+          Empresa: <input name="empresa" size="20" />
+     </p>
+     <input type="submit" value="Enviar" name="B1" />
 
-<table border="0" cellspacing="2" cellpadding="2">
-    <tr>
-       <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Nombre:<br>
-          <input type="text" name="nombre" size="25" maxlength="300">
-          </font></td>
-       <td> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Email:<br>
-          <input type="text" name="email" size="25" maxlength="300">
-          </font></td>
-    </tr>
-    <tr>
-       <td><font size="2">Dirección:<br>
-          <input type="text" name="direccion" size="30" maxlength="500">
-          </font></td>
-       <td><font size="2">Telefono:<br>
-          <input type="text" name="telefono" size="12" maxlength="15">
-          </font></td>
-    </tr>
-    <tr>
-       <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Observaciones:<br>
-          <textarea name="observaciones" cols="50" rows="5"></textarea>
-          </font></td>
-    </tr>
-    <tr>
-       <td colspan="2">
-          <div align="center"><br>
-          <input type="submit" value="Enviar">
-       </td>
-    </tr>
-</table>
-</form> 
+     <input type="hidden" value="info@2lineenergy.com" name="recipient" />
+     <input type="hidden" value="http://www.2lineenergy.com" name="redirect" />
+     <input type="hidden" value="Formulario enviado por WEB" name="subject" />
+</form>
 </section>
   </main>
   <footer>
