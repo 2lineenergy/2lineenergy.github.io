@@ -42,34 +42,41 @@
     <section>
   <h1>Formulario de contacto</h1>
   
-<form action="https://mailthis.to/example" method="POST" encType="multipart/form-data">
-  <h3>Contact Form (example)</h3>
-  <!-- Name -->
-  <input type="email" name="name" placeholder="Nombre">
-  <!-- Email -->
-  <input type="email" name="email" placeholder="Tu@mail.com">
-  <!-- Phone Number -->
-  <input type="text" name="phone" placeholder="Teléfono">
-  <!-- Textarea (Message) -->
-  <textarea name="message" placeholder="Mensaje aquí" style="height:90px"></textarea>
-  <!-- File attachments -->
-  <input type="file" name="file" placeholder="">
+<FORM ACTION="http://cgi.2lineenergy.com/FormMail.pl" METHOD="POST">
+<input type=hidden name="recipient" value="info@2liuneenergy.com">
+<input type=hidden name="subject" value="Asunto del mail que se envia">
+<input type=hidden name="redirect" value="http://2lineenergy.com">
 
-  <!-- Optional (hidden) fields -->
-  <!-- Custom email Subject -->
-  <input type="hidden" name="_subject" value="Contacto desde formulario web">
-  <!-- Custom email ReplyTo Address -->
-  <input type="hidden" name="_replyto" value="info@2lineenergy.com">
-  <!-- Redirect to a page after recaptcha -->
-  <input type="hidden" name="_after" value="https://2lineenergy.com/">
-  <!-- Honeypot (to catch comment spam bots) -->
-  <input type="hidden" name="_honeypot" value="">
-  <!-- Apply a custom confirmation message on the second step -->
-  <input type="hidden" name="_confirmation" value="">
-
-  <!-- Submit Button -->
-  <input type="submit" name="sumit" value="Enviar">
-</form>
+<table border="0" cellspacing="2" cellpadding="2">
+    <tr>
+       <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Nombre:<br>
+          <input type="text" name="nombre" size="25" maxlength="300">
+          </font></td>
+       <td> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">Email:<br>
+          <input type="text" name="email" size="25" maxlength="300">
+          </font></td>
+    </tr>
+    <tr>
+       <td><font size="2">Dirección:<br>
+          <input type="text" name="direccion" size="30" maxlength="500">
+          </font></td>
+       <td><font size="2">Telefono:<br>
+          <input type="text" name="telefono" size="12" maxlength="15">
+          </font></td>
+    </tr>
+    <tr>
+       <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Observaciones:<br>
+          <textarea name="observaciones" cols="50" rows="5"></textarea>
+          </font></td>
+    </tr>
+    <tr>
+       <td colspan="2">
+          <div align="center"><br>
+          <input type="submit" value="Enviar">
+       </td>
+    </tr>
+</table>
+</form> 
 </section>
   </main>
   <footer>
