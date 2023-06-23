@@ -42,41 +42,17 @@
     <section>
   <h1>Formulario de contacto</h1>
 	    
-<form method="POST" action="/submit-form">
-	 <fieldset>
- <legend>rellena el formulario</legend>
- <ul>
- <li>
- <label for="nombre">Nombre:</label>
- <br>
- <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
- </li>
- <li>
- <label for="mail">E-mail:</label>
- <br>
- <input type="email" id="mail" name="email" placeholder="E-mail del emisor" required>
- </li>
- <li>
- <label for="adjunto">Archivo adjunto</label>
- <br>
- <input type="file" id="adjunto" name="adjunto" required>
- </li>
- <li>
- <label for="asunto">Asunto:</label>
- <br>
- <input type="text" id="asunto" name="asunto" placeholder="Asunto" required>
- </li>
- <li>
- <label for="msn">Mensaje:</label>
- <br>
- <textarea name="msn" id="msn" rows="10" required></textarea>
- </li>
- <li>
- <input type="submit" value="Enviar">
- </li>
- </ul>
- </fieldset>
- </form>
+<form method="POST" encType="multipart/form-data">
+    <input type="text" name="name" placeholder="Your name">
+    <input type="email" name="_replyto" placeholder="Your email">
+    <textarea name="message" placeholder="Enter your message here"></textarea>
+    <input type="file" name="file" placeholder="Attachments (optional)">
+    <input type="hidden" name="_subject" value="Contact form submitted">
+    <input type="hidden" name="_after" value="https://myhomepage.net/">
+    <input type="hidden" name="_honeypot" value="">
+    <input type="hidden" name="_confirmation" value="">
+    <input type="submit" value="Send">
+</form>
 
 <dv><script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=uufu59mn&n=n1.ratufa.io"></script></dv>
 	    
