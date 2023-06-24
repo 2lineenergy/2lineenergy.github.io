@@ -2,7 +2,7 @@
 
 return [
     'subject' => [
-        'prefix' => '[Contact Form]'
+        'prefix' => '[Formulario de correo electrónico]'
     ],
     'emails' => [
         'to'   => 'info@2lineenergy.com', // Email address to receive emails via the form.
