@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>Formulario de Contacto</title>
+	<style>
+	label{
+	font-family:Arial, Helvetica;
+	font-size:0.8em;
+	}
+	</style>
+</head>
+<body>
+<form method='post' action='contact-form-proc.php' name='contactform' id='contactform'>
+	<p>
+	<label for='fullname'>Su Nombre:</label><br/>
+	<input type='text' name='fullname' />
+	</p>
+
+	<p>
+	<label for='email' >Correo de Contacto:</label><br/>
+	<input type='text' name='email' />
+	</p>
+	
+	<p>
+	<label for='phone' >Teléfono:</label><br/>
+	<input type='text' name='phone' />
+	</p>
+
+	<p>
+	<label for='subject' >Asunto:</label><br/>
+	<input type='text' name='subject' />
+	</p>
+	<input type='submit' name='submit' value='Submit Form' />
+</form>
+<script>
+document.contactform.onsubmit=function()
+{
+	if(document.contactform.fullname.value =='')
+	{
+		alert("Por fovor ponga su Nombre");
+		document.contactform.fullname.focus();
+		return false;
+	}
+	else if(document.contactform.email.value =='')
+	{
+		alert("Por favor ponga su Correo de Contacto");
+		document.contactform.email.focus();
+		return false;
+	}
+	else if(document.contactform.phone.value =='')
+	{
+		alert("Por favor ponga su Teléfono");
+		document.contactform.phone.focus();
+		return false;
+	}
+	else if(document.contactform.subject.value =='')
+	{
+		alert("Por favor indique Asunto");
+		document.contactform.subject.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+
+</body>
+</html>
