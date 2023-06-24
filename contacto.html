@@ -42,27 +42,58 @@
     <section>
   <h1>Formulario de contacto</h1>
 	    
-<form method="POST" action="contact.php">
-  <label for="name">Nombre:</label>
-  <input type="text" id="name" name="name">
+<form method='post' action='contact-form-proc.php' name='contactform' id='contactform'>
+	<p>
+	<label for='fullname'>Su Nombre:</label><br/>
+	<input type='text' name='fullname' />
+	</p>
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email">
+	<p>
+	<label for='email' >Correo de Contacto:</label><br/>
+	<input type='text' name='email' />
+	</p>
+	
+	<p>
+	<label for='phone' >Teléfono:</label><br/>
+	<input type='text' name='phone' />
+	</p>
 
-  <label for="phone">Teléfono:</label>
-  <input type="phone" id="phone" name="phone">
-
-  <label for="subject">Asunto:</label>
-  <input type="subject" id="subject" name="subject">
-
-  <label for="message">Message:</label>
-  <textarea id="message" name="message"></textarea>
-
-  <button type="submit">Enviar</button>
+	<p>
+	<label for='subject' >Asunto:</label><br/>
+	<input type='text' name='subject' />
+	</p>
+	<input type='submit' name='submit' value='Submit Form' />
 </form>
-
-<dv><script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=uufu59mn&n=n1.ratufa.io"></script></dv>
-	    
+<script>
+document.contactform.onsubmit=function()
+{
+	if(document.contactform.fullname.value =='')
+	{
+		alert("Por fovor ponga su Nombre");
+		document.contactform.fullname.focus();
+		return false;
+	}
+	else if(document.contactform.email.value =='')
+	{
+		alert("Por favor ponga su Correo de Contacto");
+		document.contactform.email.focus();
+		return false;
+	}
+	else if(document.contactform.phone.value =='')
+	{
+		alert("Por favor ponga su Teléfono");
+		document.contactform.phone.focus();
+		return false;
+	}
+	else if(document.contactform.subject.value =='')
+	{
+		alert("Por favor indique Asunto");
+		document.contactform.subject.focus();
+		return false;
+	}
+	return true;
+}
+</script>
 </section>
   </main>
   <footer>
