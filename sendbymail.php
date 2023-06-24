@@ -28,8 +28,10 @@ $email_message .= "Comentarios: " . $_POST['comments'] . "\n\n";
 $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
-mail($email_to, $email_subject, $email_message, $headers);
-
-echo "¡El formulario se ha enviado con éxito!";
+if(mail($email_to, $email_subject, $email_message, $headers)){
+     echo "¡El formulario se ha enviado con éxito!";
+} else {
+     echo "Error al enviar el correo electrónico.";
+}
 }
 ?>
