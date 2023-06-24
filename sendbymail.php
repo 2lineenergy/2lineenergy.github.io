@@ -1,10 +1,15 @@
 <?php
-if(isset($_POST['email'])) {
-
-// Debes editar las próximas dos líneas de código de acuerdo con tus preferencias
-$email_to = "info@2lineenergy.com";
-$email_subject = "Contacto desde el sitio web";
-
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = $_POST["nombre"];
+    $email = $_POST["email"];
+    $mensaje = $_POST["mensaje"];
+    
+    $to = "info@2lineenergy.com";
+    $subject = "Formulario de contacto";
+    $message = "Nombre: $nombre<br>";
+    $message .= "Correo electrónico: $email<br>";
+    $message .= "Mensaje: $mensaje";
+     
 // Aquí se deberían validar los datos ingresados por el usuario
 if(!isset($_POST['first_name']) ||
 !isset($_POST['last_name']) ||
