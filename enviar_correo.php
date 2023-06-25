@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $mensaje = $_POST['mensaje'];
 
   // Configura los detalles del servidor de correo
-  $servidor_correo = 'https://webmail.2lineenergy.com';
+  $servidor_correo = 'http://webmail.2lineenergy.com';
   $puerto = 587;
   $usuario = 'info@2lineenergy.com';
   $contrasena = 'Generan2+';
