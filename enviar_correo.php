@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $mensaje_correo .= "Mensaje: $mensaje\n";
 
   // Envía el correo
-  if (mail('destinatario@dominio.com', $asunto, $mensaje_correo, $cabeceras)) {
+  if (mail('info@2lineenergy.com', $asunto, $mensaje_correo, $cabeceras)) {
     echo "El correo ha sido enviado correctamente.";
   } else {
     echo "Hubo un error al enviar el correo.";
