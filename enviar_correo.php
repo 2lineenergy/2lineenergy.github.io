@@ -1,9 +1,9 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $nombre = $_POST['nombre'];
-  $correo = $_POST['correo'];
-  $asunto = $_POST['asunto'];
-  $mensaje = $_POST['mensaje'];
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+  $nombre = $_GET['nombre'];
+  $correo = $_GET['correo'];
+  $asunto = $_GET['asunto'];
+  $mensaje = $_GET['mensaje'];
 
   // Configura los detalles del servidor de correo
   $servidor_correo = 'http://webmail.2lineenergy.com';
