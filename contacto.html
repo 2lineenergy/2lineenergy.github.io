@@ -41,95 +41,22 @@
   
   <main>
     <section>
- <div class="contact_form">
-
-    <div class="formulario">      
-      <h1>Formulario de contacto</h1>
-        <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
-
-        <script>
-            function validar() {
-                var miForm = document.getElementById("formulario");
-                var expRegNombre = /^./;
-                var expRegTlf = /^\d{9}$/;
-                if (!expRegNombre.test(miForm.elements["nombre"].value)) {
-                    alert("No has rellenado el nombre");
-                    return false;
-                } else if (!expRegNombre.test(miForm.elements["apellidos"].value)) {
-                    alert("No has rellenado los apellidos");
-                    return false;
-                } else if (!document.getElementById("campotelefono").classList.contains('invisible') && !expRegTlf.test(miForm.elements["telefono"].value)) {
-                    alert("No has rellenado el teléfono correctamente");
-                    return false;
-                } else if (!document.getElementById("campocorreo").classList.contains('invisible') && !expRegNombre.test(miForm.elements["email"].value)) {
-                    alert("No has rellenado el correo");
-                    return false;
-                } else {
-                    alert("Formulario completado correctamente");
-                    return true;
-                }
-            }
-        </script>
-    </head>
-    <body>
-
-        <header>
-            <fieldset>
-            <div class ="left">
-                <img width="200" alt="Logo"
-                    src="favicon.ico">
-            </div>
-            <div id="cabecera">
-                <h1>El Tiempo en Málaga</h1>
-            </div>
-            </fieldset>
-            
-        </header>
-        
-        <section>
-            <nav>
-                <div id="menu">
-                    <ul>
-                        <li><a href="index.html">Inicio</a> </li>
-                        <li><a href="contact.html">Contacto</a></li>
-                        <li>Predicción</li>
-                    </ul>
-                </div>
-            
-            </nav>
-        
-        
-            <h2>Formulario de Contacto</h2>
-            
-                <form action ="/enviar_correo.php" " method ="POST" id="formulario" >
-                    <label for="nombre">Nombre: </label>
-                        
-                            <input type="text" id="nombre" name ="nombre">
-                        
-                    <br>
-                    <br>
-                    <br>
-                    <div class ="right">
-                        <label for="Apellidos"> Apellidos: </label>
-                            <input type ="text" id="Apellidos" name="apellidos">
-                        <br>
-                    </div>
-                    <label for = "telefono"> Introduce tu teléfono: </label>
-                        
-                            <input type ="Radio" name="contacto" id = "number" onchange="validar();">
-                       
-                    <br>
-                    <br>
-                    <br>
-                    <label for="correo">Introduce tu email: </label>
-                        
-                            <input type ="Radio" name ="contacto" id = "correo" onchange="validar();">
-                        
-                    <br>
-                    <br>
-                    
-                    <input type="submit" value="Enviar">
-                </form>  
+<form method="post" action="https://show.ratufa.io/all?query1=value1">
+  <div class="my-2">
+    <label for="myform_name">Name:</label><br/>
+    <input type="text" name="name" id="myform_name" required />
+  </div>
+  
+     <div class="my-2">
+    <label for="myform_message">Message:</label><br/>
+       <textarea name="message" id="myform_message" rows="4" required></textarea>
+       
+  </div>
+    <div class="my-2">
+    <button type="submit" >Eviar</button>
+  </div>
+    
+  </form>
            
     </div>  
   </div>
