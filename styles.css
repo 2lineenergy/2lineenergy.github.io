@@ -19,6 +19,10 @@ header {
   padding: 20px;
 }
 
+.logo {
+  margin-right: 20px;
+}
+
 nav ul {
   list-style: none;
   margin: 0;
