@@ -38,6 +38,11 @@ nav ul li a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  margin: 0 auto;
+}
+
 /* Estilos del contenido principal */
 main {
   padding: 20px;
