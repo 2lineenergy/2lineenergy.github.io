@@ -1,12 +1,11 @@
 /* Estilos generales */
 body {
-  display: flex;  
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-
 
 /* Estilos del encabezado */
 header {
@@ -53,14 +52,14 @@ h1, h2 {
 }
 
 .texto-centro {
-   text-align: center;
+  text-align: justify;
 }
 
 /* Estilos del formulario de contacto */
 form {
   max-width: 400px;
+  margin: 0 auto;
 }
-
 
 form label {
   display: block;
@@ -80,15 +79,15 @@ form textarea {
 form button {
   background-color: #333;
   color: #fff;
-  padding: 20px 30px;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-boton-enlace {
+.boton-enlace {
   display: inline-block;
-  padding: 20px 30px;
+  padding: 10px 20px;
   background-color: #333;
   color: #fff;
   text-decoration: none;
