@@ -92,33 +92,26 @@ form button {
 
 /* Estilos del botón de contacto */
 .boton-enlace {
-  display: inline-block;
+  display: block;
+  width: 100%;
   padding: 10px 20px;
   background-color: blue;
   color: white;
   text-decoration: none;
   border: none;
   border-radius: 5px;
-  margin-bottom: 20px; /* Agregado */
+  margin-top: 20px;
 }
 
-@media (max-width: 480px) {
-  .boton-enlace {
-    width: 100%; /* Agregado */
-  }
-}
-
-
-/* Estilos del pie de página */
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 20%;
+  position: relative;
+}
+
+@media (min-width: 480px) {
+  .boton-enlace {
+    display: inline-block;
+    width: auto;
+  }
 }
 
 #aviso-legal {
