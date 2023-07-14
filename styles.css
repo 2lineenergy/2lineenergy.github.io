@@ -101,15 +101,9 @@ form button {
 }
 
 /* Estilos del pie de página */
-.footer {
+footer {
   background-color: #333;
   color: #fff;
   padding: 20px;
   text-align: center;
-}
-
-.footer-links a {
-  color: #666;
-  text-decoration: none;
-  margin: 0 10px;
 }
