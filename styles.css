@@ -5,6 +5,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin: 0; /* Añadimos este estilo para eliminar los márgenes predeterminados */
 }
 
 /* Estilos del encabezado */
@@ -16,6 +17,7 @@ header {
   background-color: #333;
   color: #fff;
   padding: 20px;
+  width: 100%; /* Para que el header ocupe todo el ancho de la página */
 }
 
 .logo {
@@ -46,6 +48,7 @@ img {
 /* Estilos del contenido principal */
 main {
   padding: 20px;
+  width: 100%; /* Para que el contenido ocupe todo el ancho de la página */
 }
 
 section {
@@ -94,8 +97,8 @@ form button {
 .boton-enlace {
   display: block;
   width: 100%;
-  padding: auto;
-  background-color: blue;
+  padding: 10px 20px;
+  background-color: #333; /* Cambiamos el color del botón para que coincida con el menú y el footer */
   color: white;
   text-decoration: none;
   border: none;
@@ -105,21 +108,9 @@ form button {
 
 /* Estilos del pie de página */
 footer {
-  background-color: #333;
+  background-color: #333; /* Cambiamos el color del footer para que coincida con el menú y el botón */
   color: #fff;
   padding: 20px;
   text-align: center;
-}
-/* Media query para el botón de contacto en vista móvil */
-@media (min-width: 480px) {
-  .boton-enlace {
-    display: inline-block;
-    width: auto;
-  }
-}
-
-/* Estilos del enlace del aviso legal */
-#aviso-legal {
-  position: relative;
-  margin-top: 20px;
+  width: 100%; /* Para que el footer ocupe todo el ancho de la página */
 }
