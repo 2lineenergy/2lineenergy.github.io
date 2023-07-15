@@ -1,35 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-57R6XZZQ5N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-57R6XZZQ5N');
-</script>
-
-	<link rel="canonical" href="https://2lineenergy.com">
-  <style>
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        p {
-            text-align: justify;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
-        }
-    </style>	
-  <meta charset="UTF-8">
   <meta charset="UTF-8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-ancestors 'https://2lineenergy.com'">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -38,71 +9,131 @@
   <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario de contacto</title>
-<link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Formulario de contacto de 2 Line Energy. Por favor, indique su número de teléfono en el mensaje para contactar con usted y díganos cómo podemos ayudarle.">
+  <title>Formulario de Contacto - 2 Line Energy</title>
+  <link rel="canonical" href="https://2lineenergy.com/formulario-contacto.html">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #f9f9f9;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    #aviso-legal {
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
   <header>
     <nav>
       <div>
-        <img src="logo_2lineenergy.jpg" alt="2 line energy" style="width: 100px; height: auto;">
+        <img src="logo_2lineenergy.jpg" alt="Logo de 2 Line Energy" style="width: 100px; height: auto;" />
       </div>
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Acerca de</a></li>
         <li><a href="servicios.html">Servicios</a></li>
-	<li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
-  
+
   <main>
-    <section>
-<h1>Formulario de Contacto</h1>
-<h4>Por favor indique su número de teléfono en el mensaje para contactar con usted y díganos cómo podemos ayudarle</h4>
-<form method="post" action="https://show.ratufa.io/all?query1=value1">
-  <div class="my-2">
-    <label for="myform_name">Nombre:</label><br/>
-    <input type="text" name="name" id="myform_name" required />
-  </div>
-	
-  <div class="my-2">
-    <label for="myform_email">Email:</label><br/>
-    <input type="text" name="email" id="myform_email" required />
-  </div>
-
-	
-  <div class="my-2">
-    <label for="myform_message">Message:</label><br/>
-    <textarea name="message" id="myform_message" rows="4" required></textarea>
-  </div>
-   
-    <label for="consentimiento">
-    <input type="checkbox" id="consentimiento" name="consentimiento" required>
-    Acepto el tratamiento de mis datos personales.
-    </label>
-	
-  </div>
-    <div class="my-2">
-    <button type="submit" >Eviar</button>
-  </div>
-    
-  </form>
-           
-    </div>  
-  </div>
-
-
-<dv><script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=uufu59mn&n=n1.ratufa.io"></script></dv>
-	    
-</section>
+    <section class="container">
+      <h1>Formulario de Contacto</h1>
+      <p>Por favor, indique su número de teléfono en el mensaje para contactar con usted y díganos cómo podemos ayudarle.</p>
+      <form method="post" action="https://show.ratufa.io/all?query1=value1">
+        <div>
+          <label for="myform_name">Nombre:</label>
+          <input type="text" name="name" id="myform_name" required />
+        </div>
+        <div>
+          <label for="myform_email">Email:</label>
+          <input type="text" name="email" id="myform_email" required />
+        </div>
+        <div>
+          <label for="myform_message">Mensaje:</label>
+          <textarea name="message" id="myform_message" rows="4" required></textarea>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" id="consentimiento" name="consentimiento" required />
+            Acepto el tratamiento de mis datos personales.
+          </label>
+        </div>
+        <div>
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </section>
   </main>
+
   <footer>
     <p>Derechos de autor &copy; 2023 | 2 Line Energy</p>
-  <div id="aviso-leagl">
-  <a href="https://2lineenergy.com/aviso-legal.html" >Aviso legal</a>
-  </div>
+    <div id="aviso-legal">
+      <a href="https://2lineenergy.com/aviso-legal.html">Aviso legal</a>
+    </div>
   </footer>
 </body>
 </html>
