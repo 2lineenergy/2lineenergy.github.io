@@ -103,10 +103,12 @@ form button {
   margin-top: 20px;
 }
 
+/* Estilos del pie de página */
 footer {
   position: relative;
 }
 
+/* Media query para el botón de contacto en vista móvil */
 @media (min-width: 480px) {
   .boton-enlace {
     display: inline-block;
@@ -114,6 +116,7 @@ footer {
   }
 }
 
+/* Estilos del enlace del aviso legal */
 #aviso-legal {
   position: relative;
   margin-top: 20px;
