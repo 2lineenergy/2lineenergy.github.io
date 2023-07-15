@@ -1,116 +1,34 @@
-/* Estilos generales */
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 0; /* Añadimos este estilo para eliminar los márgenes predeterminados */
-}
-
-/* Estilos del encabezado */
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  width: 100%; /* Para que el header ocupe todo el ancho de la página */
-}
-
-.logo {
-  margin-right: 20px;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  margin: 0 auto;
-}
-
-/* Estilos del contenido principal */
-main {
-  padding: 20px;
-  width: 100%; /* Para que el contenido ocupe todo el ancho de la página */
-}
-
-section {
-  margin-bottom: 30px;
-}
-
-h1, h2 {
-  color: #333;
-}
-
-.texto-centro {
-  text-align: justify;
-}
-
-/* Estilos del formulario de contacto */
-form {
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 /* Estilos del botón de contacto */
 .boton-enlace {
-  display: block;
-  width: 100%;
+  display: inline-block;
   padding: 10px 20px;
-  background-color: #333; /* Cambiamos el color del botón para que coincida con el menú y el footer */
+  background-color: #ff8000; /* Cambiamos el color del botón para que resalte más */
   color: white;
   text-decoration: none;
   border: none;
   border-radius: 5px;
-  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Añadimos transición para un efecto suave al pasar el ratón */
+}
+
+.boton-enlace:hover {
+  background-color: #e67300; /* Cambiamos el color del botón al pasar el ratón sobre él */
+}
+
+/* Estilos del encabezado */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  width: 100%;
 }
 
 /* Estilos del pie de página */
 footer {
-  background-color: #333; /* Cambiamos el color del footer para que coincida con el menú y el botón */
+  background-color: #333;
   color: #fff;
   padding: 20px;
   text-align: center;
-  width: 100%; /* Para que el footer ocupe todo el ancho de la página */
+  width: 100%;
+  margin-top: 30px; /* Añadimos un margen superior para separar el footer del contenido */
 }
