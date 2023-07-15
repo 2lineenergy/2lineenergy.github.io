@@ -94,7 +94,7 @@ form button {
 .boton-enlace {
   display: block;
   width: 100%;
-  padding: 10px 20px;
+  padding: auto;
   background-color: blue;
   color: white;
   text-decoration: none;
