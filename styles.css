@@ -105,9 +105,11 @@ form button {
 
 /* Estilos del pie de página */
 footer {
-  position: relative;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
-
 /* Media query para el botón de contacto en vista móvil */
 @media (min-width: 480px) {
   .boton-enlace {
