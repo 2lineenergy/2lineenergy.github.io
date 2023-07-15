@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Google Tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-57R6XZZQ5N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-57R6XZZQ5N');
+  </script>
+
   <meta charset="UTF-8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-ancestors 'https://2lineenergy.com'">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -16,8 +25,6 @@
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      margin: 0;
-      padding: 0;
     }
 
     .container {
@@ -73,47 +80,12 @@
       cursor: pointer;
     }
 
-    header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-
-    header .logo {
-      margin-bottom: 10px;
-    }
-
-    header nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    header nav li {
-      margin-right: 20px;
-    }
-
-    header nav a {
-      text-decoration: none;
-      font-size: 18px;
-      color: #fff;
-    }
-
-    main {
-      padding-bottom: 60px; /* Para dejar espacio al footer */
-    }
-
     footer {
       width: 100%;
       background-color: #333;
       color: #fff;
       padding: 20px;
       text-align: center;
-      position: fixed;
-      bottom: 0;
     }
 
     footer a {
@@ -124,10 +96,10 @@
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="logo_2lineenergy.jpg" alt="2 Line Energy" style="width: 100px; height: auto;">
-    </div>
     <nav>
+      <div>
+        <img src="logo_2lineenergy.jpg" alt="Logo de 2 Line Energy" style="width: 100px; height: auto;" />
+      </div>
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Acerca de</a></li>
