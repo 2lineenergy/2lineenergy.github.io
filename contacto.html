@@ -21,94 +21,128 @@
   <meta name="description" content="Formulario de contacto de 2 Line Energy. Por favor, indique su número de teléfono en el mensaje para contactar con usted y díganos cómo podemos ayudarle.">
   <title>Formulario de Contacto - 2 Line Energy</title>
   <link rel="canonical" href="https://2lineenergy.com/formulario-contacto.html">
-  
   <style>
     body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
       margin: 0;
       padding: 0;
     }
 
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Estilos para los encabezados H2 y H3 */
+    h2 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
     header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .logo {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-bottom: 20px;
     }
 
-    .logo {
-      margin-right: 20px;
+    .logo img {
+      width: 100px;
+      height: auto;
     }
 
     nav ul {
       list-style-type: none;
       padding: 0;
       margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     nav li {
-      display: inline;
       margin-right: 10px;
     }
 
     nav a {
       text-decoration: none;
+      font-size: 18px;
+      color: #fff;
     }
-  
-    .trabajos-container {
-      max-width: 800px;
-      margin: 0 auto;
+
+    main {
       padding: 20px;
     }
 
-    .trabajo {
-      margin-bottom: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
     }
 
-    .trabajo img {
-      max-width: 400px;
-      height: auto;
-      margin-bottom: 10px;
-    }
-
-    .trabajo h2 {
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
-    .trabajo p {
-      text-align: justify;
-    }
-
-    .boton-enlace {
-      background-color: blue;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
+    footer a {
+      color: #fff;
       text-decoration: none;
     }
-
-    footer {
-      margin-top: 20px;
-    }
   </style>
-
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="logo_2lineenergy.jpg" alt="Logo de mi sitio web" style="width: 100px; height: auto;">
-    </div>
     <nav>
-      <ul class="enlaces">
+      <div class="logo">
+        <img src="logo_2lineenergy.jpg" alt="Logo de 2 Line Energy">
+      </div>
+      <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Acerca de</a></li>
         <li><a href="servicios.html">Servicios</a></li>
@@ -125,11 +159,11 @@
       <form method="post" action="https://show.ratufa.io/all?query1=value1">
         <div>
           <label for="myform_name">Nombre:</label>
-          <input type="text" name="name" id="myform_name" required />
+          <input type="text" name="name" id="myform_name" required>
         </div>
         <div>
           <label for="myform_email">Email:</label>
-          <input type="text" name="email" id="myform_email" required />
+          <input type="text" name="email" id="myform_email" required>
         </div>
         <div>
           <label for="myform_message">Mensaje:</label>
@@ -137,7 +171,7 @@
         </div>
         <div>
           <label>
-            <input type="checkbox" id="consentimiento" name="consentimiento" required />
+            <input type="checkbox" id="consentimiento" name="consentimiento" required>
             Acepto el tratamiento de mis datos personales.
           </label>
         </div>
