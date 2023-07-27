@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -42,10 +43,10 @@
       background-color: #333;
       color: #fff;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
       padding: 10px 20px;
+      margin-bottom: 20px;
     }
 
     .logo {
@@ -121,14 +122,19 @@
 
     /* Estilos para el botón de WhatsApp */
     .btn-whatsapp {
-      display: block;
-      text-align: center;
-      margin-top: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #25d366; /* Color de WhatsApp */
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
     }
 
-    .btn-whatsapp img {
-      width: 200px;
-      height: auto;
+    .btn-whatsapp:hover {
+      background-color: #128c7e; /* Color de WhatsApp al pasar el cursor */
     }
 
     /* Estilos para el pie de página */
@@ -159,6 +165,11 @@
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
+    <div class="btn-whatsapp">
+      <a href="https://wa.me/34693950556" target="_blank">
+        <img src="https://2lineenergy.com/Whatsapp.png" alt="WhatsApp">
+      </a>
+    </div>
   </header>
   
   <main>
@@ -181,12 +192,6 @@
     
     <div class="container">
       <img class="size-full wp-image-118 alignleft" title="images" src="person-gff49b8f30_640.jpg" alt="electricista">
-    </div>
-
-    <div class="btn-whatsapp">
-      <a href="https://wa.me/34693950556" target="_blank">
-        <img src="https://2lineenergy.com/Whatsapp.png" alt="instalar placas solares" width="200">
-      </a>
     </div>
   </main>
   
