@@ -18,81 +18,80 @@
   
   <style>
     body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
       margin: 0;
       padding: 0;
     }
 
+    /* Estilos del encabezado */
     header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
+      background-color: #333;
+      color: #fff;
+      text-align: center; /* Centrar el contenido */
+      padding: 20px 0; /* Aumentar el espacio entre el logo y el menú */
     }
 
     .logo {
-      margin-right: 20px;
+      width: 100px;
+      height: auto;
+      display: block; /* Asegurar que el logo sea un elemento en bloque */
+      margin: 0 auto; /* Centrar horizontalmente */
     }
 
     nav ul {
       list-style-type: none;
-      padding: 0;
       margin: 0;
+      padding: 0;
     }
 
     nav li {
-      display: inline;
       margin-right: 10px;
+      display: inline-block; /* Mostrar los elementos en línea */
     }
 
     nav a {
       text-decoration: none;
+      font-size: 18px;
+      color: #fff;
     }
-  
-    .trabajos-container {
-      max-width: 800px;
-      margin: 0 auto;
+
+    main {
       padding: 20px;
     }
 
-    .trabajo {
-      margin-bottom: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .trabajo img {
-      max-width: 640px;
-      height: auto;
-      margin-bottom: 10px;
-    }
-
-    .trabajo h2 {
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
-    .trabajo p {
+    .texto-centro {
       text-align: justify;
     }
 
+    /* Estilos del botón de enlace */
     .boton-enlace {
-      background-color: blue;
-      color: white;
+      display: inline-block;
       padding: 10px 20px;
-      border: none;
-      cursor: pointer;
+      background-color: #333;
+      color: #fff;
       text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
     }
 
+    .boton-enlace:hover {
+      background-color: #444;
+    }
+
+    /* Estilos del pie de página */
     footer {
-      margin-top: 20px;
-      text-align: center; /* Centrar el texto del footer */
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
     }
   </style>
 
