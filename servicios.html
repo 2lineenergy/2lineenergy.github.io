@@ -33,7 +33,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       padding: 10px 20px;
       margin-bottom: 20px;
     }
@@ -41,6 +40,7 @@
     .logo {
       width: 100px;
       height: auto;
+      margin-bottom: 10px; /* Agregar espacio entre el logo y el menú */
     }
 
     nav ul {
@@ -118,7 +118,7 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      margin-right: 10px;
+      margin-top: 20px; /* Agregar espacio entre el botón y el menú */
     }
 
     .btn-whatsapp:hover {
@@ -145,6 +145,11 @@
     <div class="logo">
       <img src="logo_2lineenergy.jpg" alt="2 Line Energy">
     </div>
+    <div class="btn-whatsapp"> <!-- Mover el botón de WhatsApp al header -->
+      <a href="https://wa.me/34693950556" target="_blank">
+        <img src="https://2lineenergy.com/Whatsapp.png" alt="WhatsApp">
+      </a>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -154,11 +159,6 @@
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
-    <div class="btn-whatsapp">
-      <a href="https://wa.me/34693950556" target="_blank">
-        <img src="https://2lineenergy.com/Whatsapp.png" alt="WhatsApp">
-      </a>
-    </div>
   </header>
   
   <main>
@@ -187,7 +187,7 @@
   <a href="https://2lineenergy.com/contacto.html" class="boton-enlace">Contacto</a>
   
   <footer>
-    <p>Derechos de autor &copy; 2023 | 2 Line Energy</p>
+    <p style="margin-bottom: 0;">Derechos de autor &copy; 2023 | 2 Line Energy</p> <!-- Centrar el texto del footer -->
     <div id="aviso-legal">
       <a href="https://2lineenergy.com/aviso-legal.html" class="boton-enlace">Aviso legal</a>
     </div>
