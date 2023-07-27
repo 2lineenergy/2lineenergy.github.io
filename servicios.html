@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,7 +26,12 @@
   <link rel="canonical" href="https://2lineenergy.com">
   
   <style>
+    /* Estilos del cuerpo y el encabezado */
     body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -34,29 +40,36 @@
     }
 
     header {
+      background-color: #333;
+      color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
       margin-bottom: 20px;
+      padding: 10px 20px;
     }
 
     .logo {
       margin-right: 20px;
+      width: 100px;
+      height: auto;
     }
 
     nav ul {
       list-style-type: none;
       padding: 0;
       margin: 0;
+      display: flex;
     }
 
     nav li {
-      display: inline;
       margin-right: 10px;
     }
 
     nav a {
       text-decoration: none;
+      font-size: 18px;
+      color: #fff;
     }
 
     /* Estilos para los encabezados H2 y H3 */
@@ -83,16 +96,19 @@
 
     /* Estilos para el botón de enlace */
     .boton-enlace {
-      display: block;
-      width: 100%;
+      display: inline-block;
       padding: 10px 20px;
-      background-color: blue;
-      color: white;
+      background-color: #333;
+      color: #fff;
       text-decoration: none;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       margin-top: 20px;
+    }
+
+    .boton-enlace:hover {
+      background-color: #444;
     }
 
     /* Estilos para las imágenes */
@@ -103,15 +119,40 @@
       max-width: 640px;
       height: auto;
     }
+
+    /* Estilos para el botón de WhatsApp */
+    .btn-whatsapp {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn-whatsapp img {
+      width: 200px;
+      height: auto;
+    }
+
+    /* Estilos para el pie de página */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="logo_2lineenergy.jpg" style="width: 100px; height: auto;" alt="2 Line Energy">
+      <img src="logo_2lineenergy.jpg" alt="2 Line Energy">
     </div>
     <nav>
-      <ul class="enlaces">
+      <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Acerca de</a></li>
         <li><a href="servicios.html">Servicios</a></li>
@@ -141,6 +182,12 @@
     
     <div class="container">
       <img class="size-full wp-image-118 alignleft" title="images" src="person-gff49b8f30_640.jpg" alt="electricista">
+    </div>
+
+    <div class="btn-whatsapp">
+      <a href="https://wa.me/34693950556" target="_blank">
+        <img src="https://2lineenergy.com/Whatsapp.png" alt="instalar placas solares" width="200">
+      </a>
     </div>
   </main>
   
