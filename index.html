@@ -3,49 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <!-- Metadatos... -->
   <title>Autoconsumo Solar - 2 Line Energy</title>
   <link rel="canonical" href="https://2lineenergy.com/">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Estilos para escritorio */
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Estilos para dispositivos móviles */
-    @media only screen and (max-width: 600px) {
-      header {
-        padding: 10px 0;
-      }
-      
-      .logo {
-        width: 80px;
-      }
-
-      nav ul {
-        display: none;
-        text-align: center;
-      }
-
-      nav ul.show {
-        display: block;
-      }
-
-      nav li {
-        display: block;
-        margin: 10px 0;
-      }
-
-      .boton-enlace {
-        display: block;
-        margin: 20px auto;
-      }
-    }
-  </style>
 </head>
 <body>
 
@@ -79,7 +39,7 @@
       <img src="electricity-g7a6c1e88d_640.jpg" alt="Autoconsumo con placas solares" width="640" height="427">
     </section>
   </main>
-  
+
   <div class="btn-whatsapp">
     <a href="https://wa.me/34693950556" target="_blank">
       <img src="https://2lineenergy.com/Whatsapp.png" alt="WhatsApp" style="width: 200px; height: auto;">
@@ -87,7 +47,7 @@
   </div>
 
   <a href="https://2lineenergy.com/contacto.html" class="boton-enlace">Contacto</a>
-  
+
   <footer>
     <p>Derechos de autor &copy; 2023 | 2 Line Energy</p>
     <div id="aviso-legal">
@@ -95,15 +55,8 @@
     </div>
   </footer>
 
-  <script>
-    // Agrega funcionalidad para mostrar/ocultar el menú en dispositivos móviles
-    document.addEventListener('DOMContentLoaded', function () {
-      var navUl = document.querySelector('nav ul');
-      var navToggle = document.querySelector('.logo');
-      navToggle.addEventListener('click', function () {
-        navUl.classList.toggle('show');
-      });
-    });
-  </script>
+  <!-- JavaScript para mostrar/ocultar el menú en dispositivos móviles -->
+  <script src="script.js"></script>
+
 </body>
 </html>
