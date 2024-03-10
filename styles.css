@@ -26,6 +26,13 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  padding: 5px; /* Añadir espacio alrededor del texto */
+  border-radius: 5px; /* Esquinas redondeadas */
+  transition: background-color 0.3s ease-in-out; /* Animación de cambio de color al pasar el cursor */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255,255,255,0.2); /* Cambiar el color de fondo al pasar el cursor */
 }
 
 main {
@@ -36,7 +43,7 @@ main {
 }
 
 .texto-centro {
-  text-align: center;
+    text-align: center;
 }
 
 .btn-whatsapp,
@@ -64,8 +71,8 @@ footer {
     text-align:center; 
     padding:10px; 
     animation-name: slideDownFooter; /* Animación de deslizamiento */
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+    animation-duration:1s;
+    animation-timing-function:ease-in-out;
 }
 
 footer p{
