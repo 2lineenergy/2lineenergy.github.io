@@ -35,6 +35,12 @@ nav ul li a:hover {
     background-color: rgba(255,255,255,0.2); /* Cambiar el color de fondo al pasar el cursor */
 }
 
+.imagen-responsiva {
+    max-width: 100%;
+    height: auto;
+}
+
+
 main {
     text-align: left;
     margin: 0 auto;
