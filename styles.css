@@ -120,3 +120,16 @@ footer {
     text-align:center; 
     padding:10px; 
 }
+
+.content {
+  text-align: center;
+  padding: 50px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
