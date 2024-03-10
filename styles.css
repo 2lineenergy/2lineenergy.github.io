@@ -1,29 +1,25 @@
-/* Estilos generales */
 body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 0;
+  min-height: 100vh;
 }
 
-/* Estilos del encabezado */
 header {
-  background-color: #333;
+  background-color: #007bff;
   color: #fff;
-  padding: 20px;
-  width: 100%;
-}
-
-.logo {
-  margin-right: 20px;
+  padding: 10px 0;
 }
 
 nav ul {
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 nav ul li {
@@ -34,87 +30,66 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 30px; /* Aumentamos el tamaño del texto en los enlaces del menú */
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Estilos del contenido principal */
 main {
+  flex-grow: 1;
+  max-width: 800px;
+  margin: 20px auto;
   padding: 20px;
-  width: 100%;
-}
-
-section {
-  margin-bottom: 30px;
-  text-align: justify;
-}
-
-h1, h2 {
-  color: #333;
-  text-align: justify; /* Alineación justificada para los encabezados H1 y H2 */
-}
-
-img {
-  display: block;
-  margin: 0 auto;
-}
-
-/* Estilos del formulario de contacto */
-form {
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
+  background-color: #fff;
   border-radius: 5px;
 }
 
-form button {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Estilos del botón de contacto */
+.btn-whatsapp,
 .boton-enlace {
-  display: block;
-  width: 100%;
-  padding: 10px 20px;
-  background-color: #ff8000;
-  color: white;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  margin-top: 20px;
+    display: block;
+    width:200px; 
+    margin:20px auto; 
+    text-align:center; 
+    background-color:#007bff; 
+    color:#fff; 
+    padding:10px; 
+    border-radius:5px; 
+    text-decoration:none; 
 }
 
+.btn-whatsapp:hover,
 .boton-enlace:hover {
-  background-color: #e67300;
+    background-color:#0056b3; 
 }
 
-/* Estilos del pie de página */
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  margin-top: 30px;
+    background-color:#333; 
+    color:#fff; 
+    text-align:center; 
+    padding:10px; 
+    animation-name: slideDownFooter;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+footer p{
+    margin-bottom:-10px; 
+}
+
+footer a{
+    color:#fff; 
+    text-decoration:none; 
+    font-weight:bold; 
+    font-size:.8em; 
+}
+
+footer a:hover{
+    text-decoration:none; 
+    color:#007bff; 
+}
+
+@keyframes slideDownFooter {
+   from {
+       transform: translateY(-100%);
+   }
+   to {
+       transform: translateY(0);
+   }
 }
