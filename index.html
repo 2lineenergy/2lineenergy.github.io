@@ -16,6 +16,9 @@
       color: #333;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     header {
       background-color: #007bff;
@@ -37,6 +40,7 @@
       text-decoration: none;
     }
     main {
+      flex-grow: 1;
       max-width: 800px;
       margin: 20px auto;
       padding: 20px;
@@ -61,11 +65,9 @@
     }
     footer {
         background-color: #333;
-        color: #fff;
+        color:#fff; 
         text-align:center; 
         padding:10px; 
-        position:absolute; 
-        bottom:-50px; 
         width:100%;
      }
      footer p{
@@ -87,7 +89,7 @@
 
 <header>
     <div class="logo">
-        <img src="logo_2lineenergy.jpg" alt="2 Line Energy - Autoconsumo Solar en Málaga" style="width: 100px; height:auto;">
+        <img src="logo_2lineenergy.jpg" alt="2 Line Energy - Autoconsumo Solar en Málaga" style="width:100px;height:auto;">
     </div>
     <nav>
         <ul>
@@ -122,14 +124,6 @@
         <img src="electricity-g7a6c1e88d_640.jpg" alt="Instalación de placas solares en Málaga" width="640" height="427">
     </section>
 </main>
-
-<div class="btn-whatsapp">
-    <a href="https://wa.me/34693950556" target="_blank">
-        <img src="https://2lineenergy.com/Whatsapp.png" alt="Contacto por WhatsApp - 2 Line Energy" style="width:200px;height:auto;">
-    </a>
-</div>
-
-<a href="https://2lineenergy.com/contacto.html" class="boton-enlace">Contacto - 2 Line Energy</a>
 
 <footer>
     <p>&copy; 2024 2 Line Energy - Especialistas en Energía Solar en Málaga</p>
