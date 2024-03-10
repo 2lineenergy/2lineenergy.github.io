@@ -26,13 +26,6 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 5px; /* Añadir espacio alrededor del texto */
-  border-radius: 5px; /* Esquinas redondeadas */
-  transition: background-color 0.3s ease-in-out; /* Animación de cambio de color al pasar el cursor */
-}
-
-nav ul li a:hover {
-    background-color: rgba(255,255,255,0.2); /* Cambiar el color de fondo al pasar el cursor */
 }
 
 main {
@@ -65,37 +58,42 @@ main {
     background-color:#0056b3; 
 }
 
+form {
+    max-width:600px; /* Ajustar el ancho máximo del formulario */
+    margin:auto; /* Centrar el formulario en la página */
+    padding:20px; /* Añadir espacio interno al formulario */
+    background-color:#f9f9f9; /* Color de fondo del formulario */
+    border-radius:5px; /* Esquinas redondeadas */
+}
+
+form label {
+    display:block; /* Mostrar las etiquetas en una línea separada */
+    margin-bottom:10px; /* Espacio entre etiquetas y campos de entrada */
+}
+
+form input,
+form textarea,
+form button {
+    width:100%; /* Ancho completo para los campos de entrada y botón */
+    padding:10px; /* Añadir espacio interno a los elementos */
+    margin-bottom:10px; /* Espacio entre elementos */
+    border-radius:5px; /* Esquinas redondeadas */
+}
+
+form button {
+    background-color:#007bff; 
+    color:#fff; 
+    border:none; 
+    cursor:pointer; 
+}
+
+form button:hover {
+    background-color:#0056b3; 
+}
+
 footer {
     background-color:#333; 
     color:#fff; 
     text-align:center; 
     padding:10px; 
-    animation-name: slideDownFooter; /* Animación de deslizamiento */
-    animation-duration:1s;
-    animation-timing-function:ease-in-out;
-}
-
-footer p{
-    margin-bottom:-10px; 
-}
-
-footer a{
-    color:#fff; 
-    text-decoration:none; 
-    font-weight:bold; 
-    font-size:.8em; 
-}
-
-footer a:hover{
-    text-decoration:none; 
-    color:#007bff; 
-}
-
-@keyframes slideDownFooter {
-   from {
-       transform: translateY(-100%);
-   }
-   to {
-       transform: translateY(0);
-   }
 }
