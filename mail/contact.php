@@ -1,5 +1,8 @@
 <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=y8e28zmw&n=n1.ratufa.io"></script>
 <?php
+
+  http_response_code(399);
+
 if(empty($_POST['name']) || empty($_POST['subject']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
   http_response_code(400);
   exit();
