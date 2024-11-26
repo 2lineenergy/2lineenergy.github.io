@@ -313,29 +313,30 @@
                 <div class="col-lg-8">
                     <div class="contact-form">
                         <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <form id="contactForm" action="https://n1.ratufa.io/forms/y8e28zmw" method="POST">
                             <div class="form-row">
                                 <div class="col-sm-6 control-group">
-                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" id="name" placeholder="Su Nombre" required="required" data-validation-required-message="Por favor ponga su nombre" />
+                                    <input type="text" name="name" class="form-control bg-secondary border-0 py-4 px-3" id="name" placeholder="Su Nombre" required="required" data-validation-required-message="Por favor ponga su nombre" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="col-sm-6 control-group">
-                                    <input type="email" class="form-control bg-secondary border-0 py-4 px-3" id="email" placeholder="Su Email" required="required" data-validation-required-message="Por favor ponga email" />
+                                    <input type="email" name="email" class="form-control bg-secondary border-0 py-4 px-3" id="email" placeholder="Su Email" required="required" data-validation-required-message="Por favor ponga email" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control bg-secondary border-0 py-4 px-3" id="subject" placeholder="Asunto" required="required" data-validation-required-message="Asunto a tratar" />
+                                <input type="text" name="subject" class="form-control bg-secondary border-0 py-4 px-3" id="subject" placeholder="Asunto" required="required" data-validation-required-message="Asunto a tratar" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="6" id="message" placeholder="Mensage" required="required" data-validation-required-message="Por favor redacte su mensage"></textarea>
+                                <textarea name="message" class="form-control bg-secondary border-0 py-2 px-3" rows="6" id="message" placeholder="Mensage" required="required" data-validation-required-message="Por favor redacte su mensage"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="text-center">
                                 <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" id="sendMessageButton">Enviar Mensage</button>
                             </div>
                         </form>
+                        <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=y8e28zmw&n=n1.ratufa.io"></script>
                     </div>
                 </div>
             </div>
