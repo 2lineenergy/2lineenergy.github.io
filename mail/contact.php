@@ -1,40 +1,52 @@
 <?php
-// Configuración inicial
 header('Content-Type: application/json');
 
-// Validar si los campos requeridos están presentes
-if (empty($_POST['name']) || empty($_POST['subject']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    http_response_code(400);
-    echo json_encode(['error' => 'Por favor, complete todos los campos correctamente.']);
-    exit();
+// Verifica si los datos están presentes
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    echo json_encode(['success' => false, 'message' => 'Método no permitido.']);
+    exit;
 }
 
-// Sanear los datos recibidos
-$name = strip_tags(htmlspecialchars($_POST['name']));
-$email = strip_tags(htmlspecialchars($_POST['email']));
-$m_subject = strip_tags(htmlspecialchars($_POST['subject']));
-$message = strip_tags(htmlspecialchars($_POST['message']));
+$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+$subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_STRING);
+$message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
 
-// Crear el cuerpo del mensaje
-$to = "info@2lineenergy.com"; // Cambia esto por tu dirección de correo
-$subject = "$m_subject: $name";
-$body = "Has recibido un nuevo mensaje desde el formulario de contacto de tu página web.\n\n";
-$body .= "Detalles:\n\n";
-$body .= "Nombre: $name\n";
-$body .= "Email: $email\n";
-$body .= "Asunto: $m_subject\n";
-$body .= "Mensaje:\n$message\n";
-$headers = "From: no-reply@2lineenergy.com\r\n"; // Cambia el dominio si es necesario
-$headers .= "Reply-To: $email\r\n";
-
-// Intentar enviar el correo
-if (!mail($to, $subject, $body, $headers)) {
-    http_response_code(500);
-    echo json_encode(['error' => 'Error al enviar el correo. Inténtelo más tarde.']);
-    exit();
+if (!$name || !$email || !$subject || !$message) {
+    echo json_encode(['success' => false, 'message' => 'Todos los campos son obligatorios.']);
+    exit;
 }
 
-// Respuesta de éxito
-http_response_code(200);
-echo json_encode(['success' => 'El mensaje se envió correctamente.']);
+// Datos para RatuFaMailer
+$api_url = "https://www.ratufa.io/c/ld.js?"; // Asegúrate de que esta URL sea correcta
+$api_key = "f=y8e28zmw&n=n1.ratufa.io"; // Reemplaza con tu clave API proporcionada por RatuFaMailer
+$to_email = "info@2lineenergy.com"; // Cambia esto por tu correo de destino
+
+// Prepara los datos para enviar el correo
+$post_data = [
+    "api_key" => $api_key,
+    "to" => $to_email,
+    "from" => $email,
+    "subject" => "Nuevo mensaje de contacto: $subject",
+    "message" => "Nombre: $name\nCorreo: $email\nAsunto: $subject\n\nMensaje:\n$message",
+];
+
+// Configura la solicitud cURL
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $api_url);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post_data));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+// Ejecuta la solicitud
+$response = curl_exec($ch);
+$http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
+
+// Manejo de la respuesta
+if ($http_code === 200) {
+    echo json_encode(['success' => true, 'message' => 'Tu mensaje ha sido enviado exitosamente.']);
+} else {
+    echo json_encode(['success' => false, 'message' => 'No se pudo enviar el correo. Inténtalo de nuevo.']);
+}
 ?>
