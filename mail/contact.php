@@ -1,10 +1,5 @@
 <?php
-$headers = [
-    'Content-Type: application/json',
-    'Authorization: Bearer ' . $api_key
-];
-
-curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+header('Content-Type: application/json');
 
 // Verifica si los datos están presentes
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -22,14 +17,13 @@ if (!$name || !$email || !$subject || !$message) {
     exit;
 }
 
-// Datos para RatuFaMailer
-$api_url = "https://n1.ratufa.io/api/v1/send"; // Asegúrate de que esta URL sea correcta
-$api_key = "y8e28zmw"; // Reemplaza con tu clave API proporcionada por RatuFaMailer
-$to_email = "info@2lineenergy.com"; // Cambia esto por tu correo de destino
+// Configura la URL y clave del API de RatuFaMailer
+$api_url = "https://n1.ratufa.io/api/v1/send"; // URL correcta del endpoint
+$api_key = "y8e28zmw"; // Reemplaza con tu clave API
+$to_email = "info@2lineenergy.com"; // Correo de destino
 
 // Prepara los datos para enviar el correo
 $post_data = [
-    "api_key" => $api_key,
     "to" => $to_email,
     "from" => $email,
     "subject" => "Nuevo mensaje de contacto: $subject",
@@ -40,8 +34,12 @@ $post_data = [
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $api_url);
 curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post_data));
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'Content-Type: application/json',
+    'Authorization: Bearer ' . $api_key
+]);
 
 // Ejecuta la solicitud
 $response = curl_exec($ch);
@@ -52,6 +50,7 @@ curl_close($ch);
 if ($http_code === 200) {
     echo json_encode(['success' => true, 'message' => 'Tu mensaje ha sido enviado exitosamente.']);
 } else {
+    error_log('Error al enviar correo: ' . $response);
     echo json_encode(['success' => false, 'message' => 'No se pudo enviar el correo. Inténtalo de nuevo.']);
 }
 ?>
