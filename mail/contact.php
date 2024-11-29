@@ -1,5 +1,10 @@
 <?php
-header('Content-Type: application/json');
+$headers = [
+    'Content-Type: application/json',
+    'Authorization: Bearer ' . $api_key
+];
+
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 // Verifica si los datos están presentes
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -18,8 +23,8 @@ if (!$name || !$email || !$subject || !$message) {
 }
 
 // Datos para RatuFaMailer
-$api_url = "https://www.ratufa.io/c/ld.js?"; // Asegúrate de que esta URL sea correcta
-$api_key = "f=y8e28zmw&n=n1.ratufa.io"; // Reemplaza con tu clave API proporcionada por RatuFaMailer
+$api_url = "https://n1.ratufa.io/api/v1/send"; // Asegúrate de que esta URL sea correcta
+$api_key = "y8e28zmw"; // Reemplaza con tu clave API proporcionada por RatuFaMailer
 $to_email = "info@2lineenergy.com"; // Cambia esto por tu correo de destino
 
 // Prepara los datos para enviar el correo
